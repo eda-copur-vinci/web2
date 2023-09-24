@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const FILM = [
+const FILMS = [
   {
     id: 1,
     title: 'Princesse Mononoké',
@@ -26,10 +26,9 @@ const FILM = [
 
 ];
 
-// Read all the pizzas from the menu
-router.get('/', (req, res, next) => {
-  console.log('GET /pizzas');
-  res.json(MENU);
-});
+// Read all the films
+router.get('/', function (req, res) {
+    return res.json(FILMS);
+  });
 
 module.exports = router;
