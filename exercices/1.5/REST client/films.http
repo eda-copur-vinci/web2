@@ -1,0 +1,24 @@
+### CREATE ONE : Créer une ressource basée sur les données de la requête
+POST http://localhost:3000/films
+Content-Type: application/json
+
+{
+    "id": 4,
+    "title": "Le Voyage de Chihiro",
+    "duration": 124,
+    "budget": 19000000,
+    "link": "https://www.imdb.com/title/tt0245429/"
+}
+
+
+
+
+### READ ONE : Lire la ressource identifiée
+@urlFilm = http://localhost:3000
+GET {{urlFilm}}/films/3
+
+### READ ALL FILTERED : Lire toutes les ressources de la collection selon le filtre donné
+GET {{urlFilm}}/films/?minimum-duration=100
+
+
+
